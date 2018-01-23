@@ -5,18 +5,18 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
-import {HttpService} from "../providers/HttpService";
-import {CommonService} from "../providers/CommonService";
 import { HttpModule }from '@angular/http';
-import {CommonJs} from "../providers/CommonJs";
+import {IonicStorageModule} from "@ionic/storage";
 @NgModule({
   declarations: [
     MyApp,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp,{
+      tabsHideOnSubPages:true,
+    }),
+    IonicStorageModule.forRoot(),
     HttpModule
   ],
   bootstrap: [IonicApp],
@@ -27,9 +27,7 @@ import {CommonJs} from "../providers/CommonJs";
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HttpService,
-    CommonService,
-    CommonJs,
+
   ]
 })
 export class AppModule {}
