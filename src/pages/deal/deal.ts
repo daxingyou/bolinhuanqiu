@@ -11,6 +11,8 @@ import {IonicPage, NavController, LoadingController} from "ionic-angular";
 })
 
 export class DealPage {
+  infoArray = ["base_0", "base_1"];
+  info = this.infoArray[0];
   constructor(public navCtrl: NavController,
               public LoadCtrl: LoadingController) {
   }
@@ -25,8 +27,6 @@ export class DealPage {
   //   });
   //
   // }
-
-
 
 
 
