@@ -75,6 +75,7 @@ page-adddel{
     .item-ios.item-block .item-inner,
     .item-md.item-block .item-inner{
       padding-left: 8px;
+      float: left;
     }
     .list-ios > .item-block:last-child,
     .list-md > .item-wrapper:last-child .item-block{
@@ -83,6 +84,12 @@ page-adddel{
     .list-ios > .item-block:first-child,
     .list-md > .item-block:first-child{
       border-top: none;
+    }
+    .list-ios > .item-block,.list-md > .item-block{
+      display: inline;
+    }
+    .item.item-ios .checkbox-ios,.item.item-md .checkbox-md{
+      float: right;
     }
   }
 
