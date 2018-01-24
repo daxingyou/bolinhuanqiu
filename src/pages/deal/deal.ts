@@ -15,20 +15,12 @@ export class DealPage {
   info = this.infoArray[0];
   constructor(public navCtrl: NavController,
               public LoadCtrl: LoadingController) {
+
   }
 
-
-  // ionViewDidEnter() {
-  //   this.loading = this.LoadCtrl.create({});
-  //   this.loading.present();
-  //   setTimeout(() => {
-  //     this.getList(this.data);
-  //     this.banner();
-  //   });
-  //
-  // }
-
-
+  addDel(){
+    this.navCtrl.push('AdddelPage');
+  }
 
 }
 

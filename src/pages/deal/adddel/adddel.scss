@@ -1,4 +1,4 @@
-page-account{
+page-adddel{
   .toolbar-ios ion-title,.toolbar-md ion-title{
     padding: 0 0 1px;
   }
@@ -9,12 +9,26 @@ page-account{
   ion-header .toolbar-md ion-title{
     background-color: #1f2229;
     overflow: hidden;
-    button{
+    button,.history{
       float: left;
       width: 20%;
       background-color: #1f2229;
       color: #d9bc84;
       height: 100%;
+
+    }
+    button:last-child{
+      overflow: hidden;
+      height: 30px;
+      border:1px solid #d9bc84;
+      border-radius: 5px;
+      width: 70%;
+      margin:7px 15%;
+      text-align: center;
+      line-height: 30px;
+      padding: 0;
+
+
     }
     h3{
       float: left;
@@ -30,26 +44,45 @@ page-account{
   }
   .all-content{
     background-color: #232730;
+    .row1{
+      background-color: #2c3039;
+      padding: 0 10px;
+      .note-ios,.note-md{
+        color: #696d76;
+
+      }
+      .col{
+        text-align: left!important;
+      }
+      .col:nth-child(2){
+        text-align: right!important;
+      }
+    }
+
     .item-ios,.item-md{
       background-color: #232730;
       color: #d9bc84;
       padding-left: 0;
-      font-size: 14px;
     }
-    .row3 .col:nth-child(2),
-    .row3 .col:nth-child(3){
+
+    .row3 .col:nth-child(2){
       text-align: right;
-    }
-    [icon-right] ion-icon, [icon-end] ion-icon{
-      color: #d9bc84;
     }
     .list-ios .item-block .item-inner,
     .list-md .item-block .item-inner{
-      border-bottom: 0.55px solid #31353e;;
+      border-bottom: 0.55px solid #333740;
     }
     .item-ios.item-block .item-inner,
     .item-md.item-block .item-inner{
       padding-left: 8px;
+    }
+    .list-ios > .item-block:last-child,
+    .list-md > .item-wrapper:last-child .item-block{
+      border-bottom: 0.55px solid #333740;
+    }
+    .list-ios > .item-block:first-child,
+    .list-md > .item-block:first-child{
+      border-top: none;
     }
   }
 

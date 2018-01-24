@@ -1,10 +1,28 @@
 <ion-header>
-    <ion-navbar >
-        <ion-title>账户</ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>账户</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title><button> <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon> 返回</button><h3>用户信息</h3></ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content class="all-content" >
+<ion-content class="all-content">
 
-
+  <ion-list>
+    <div>
+      <ion-item icon-right *ngFor="let item of items" (click)="itemSelected(item.id)">
+        <ion-row class="row3" icon-right>
+          <ion-col>{{item.name}}</ion-col>
+          <ion-col>2552.145</ion-col>
+        </ion-row>
+      </ion-item>
+      <ion-item icon-right *ngFor="let ite of itemx" (click)="itemSelected(ite.id)">
+        <ion-row class="row3" icon-right>
+          <ion-col>{{ite.name}}</ion-col>
+          <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+        </ion-row>
+      </ion-item>
+    </div>
+  </ion-list>
 </ion-content>
