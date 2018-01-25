@@ -1,20 +1,23 @@
 import {Component} from "@angular/core";
 import {IonicPage, NavController} from "ionic-angular";
 @IonicPage({
-  name: 'FinancePage',
-  segment: 'FinancePage'
+  name: 'MorePage',
+  segment: 'MorePage'
 })
 
 @Component({
-  selector: 'page-finance',
-  templateUrl: 'finance.html'
+  selector: 'page-more',
+  templateUrl: 'more.html'
 })
 
-export class FinancePage {
+export class MorePage {
 
   constructor(public navCtrl: NavController) {
 
 
+  }
+  inforDetail(){
+    this.navCtrl.push("InfordetailPage");
   }
 
 

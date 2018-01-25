@@ -1,27 +1,38 @@
 import {Component} from "@angular/core";
-import {IonicPage, NavController, LoadingController} from "ionic-angular";
-
+import {IonicPage, NavController,LoadingController} from "ionic-angular";
 @IonicPage({
-  name: 'DealPage',
-  segment: 'DealPage'
+  name:'DealPage',
+  segment:'DealPage'
 })
+
 @Component({
-  selector: './page-deal',
+  selector: 'page-deal',
   templateUrl: 'deal.html'
 })
 
+
 export class DealPage {
-  infoArray = ["base_0", "base_1"];
-  info = this.infoArray[0];
   constructor(public navCtrl: NavController,
-              public LoadCtrl: LoadingController) {
+              public LoadCtrl: LoadingController
+  ) {
+
+
 
   }
-
-  addDel(){
-    this.navCtrl.push('AdddelPage');
+  goBack() {
+    this.navCtrl.pop();
   }
+
+  /**
+   * 跳转历史订单页
+   */
+  getHistory(){
+    this.navCtrl.push('HistoryorderPage');
+  }
+  getOrder(){
+    this.navCtrl.push('OrderPage');
+  }
+
+
 
 }
-
-

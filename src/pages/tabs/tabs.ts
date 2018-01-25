@@ -12,10 +12,10 @@ import {Component} from "@angular/core";
 export class TabsPage {
   // @ViewChild('mainTabs') tabs: Tabs;
 
-  tab1Root='DealPage';
-  tab2Root='AccountPage';
-  tab3Root='PositionPage';
-  tab4Root= 'FinancePage';
+  tab1Root='HomePage';
+  tab2Root='DealPage';
+  tab3Root='MyPage';
+  tab4Root= 'MorePage';
   id;
   constructor() {
 

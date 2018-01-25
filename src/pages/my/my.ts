@@ -1,15 +1,15 @@
 import {Component} from "@angular/core";
 import {IonicPage, NavController, LoadingController} from "ionic-angular";
 @IonicPage({
-  name: 'AccountPage',
-  segment: 'AccountPage'
+  name: 'MyPage',
+  segment: 'MyPage'
 })
 @Component({
-  selector: './page-account',
-  templateUrl: 'account.html'
+  selector: './page-my',
+  templateUrl: 'my.html'
 })
 
-export class AccountPage {
+export class MyPage {
   items = [];
   itemx =[];
   constructor(public navCtrl: NavController,
@@ -29,6 +29,23 @@ export class AccountPage {
       {id: 4, name: "开通实盘用户"}
     ];
 
+  }
+
+  itemSelected(id) {
+    switch (id) {
+      case 1:
+        this.navCtrl.push('InformPage');
+        break;
+      case 2:
+        this.navCtrl.push('HistoryorderPage');
+        break;
+      // case 3:
+      //   this.navCtrl.push('RemoneyPage');
+      //   break;
+      // case 4:
+      //   this.navCtrl.push('AchievePage');
+      //   break;
+    }
   }
 
 

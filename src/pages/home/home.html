@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>交易</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title><img src="assets/img/logo.png">模拟资金:<span>1583.22$</span></ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="info">
+      <ion-segment-button value="base_0">
+        <label>自选品种</label>
+      </ion-segment-button>
+      <ion-segment-button value="base_1">
+        <label>外汇品种</label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content class="all-content" [ngSwitch]="info">
+  <ion-row class="row1">
+    <ion-col center text-center>
+      <ion-note>
+        商品
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        买入
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center>
+      <ion-note>
+        卖出
+      </ion-note>
+    </ion-col>
+  </ion-row>
+  <div *ngSwitchCase='"base_0"'>
+    <ion-row class="row2">
+      <ion-col center text-center (click)="addDel()">
+        <button ion-button clear small>
+          <div>-</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center (click)="addDel()">
+        <button ion-button clear small>
+          <div>添加自选品种</div>
+        </button>
+      </ion-col>
+      <ion-col center text-center (click)="addDel()">
+        <button ion-button clear small>
+          <div>+</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <div>
+        <ion-item icon-right>
+          <ion-row class="row3" icon-right>
+            <ion-col>XDFMM(黄金)</ion-col>
+            <ion-col>2552.145</ion-col>
+            <ion-col>155.124</ion-col>
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+          </ion-row>
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+  <div *ngSwitchCase='"base_1"'>
+    <ion-list>
+      <div>
+        <ion-item icon-right>
+          <ion-row class="row3" icon-right>
+            <ion-col>XDFMM(黄金)</ion-col>
+            <ion-col class="color-blue">2552.145</ion-col>
+            <ion-col class="color-blue">155.124</ion-col>
+            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+          </ion-row>
+
+        </ion-item>
+      </div>
+    </ion-list>
+  </div>
+
+
+</ion-content>

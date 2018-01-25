@@ -1,23 +1,21 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>交易</ion-title>
+    <ion-title>持仓</ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title><img src="assets/img/logo.png">模拟资金:<span>1583.22$</span></ion-title>
-  </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="info">
-      <ion-segment-button value="base_0">
-        <label>自选品种</label>
-      </ion-segment-button>
-      <ion-segment-button value="base_1">
-        <label>外汇品种</label>
-      </ion-segment-button>
-    </ion-segment>
+    <ion-title>
+      <button (click)="goBack()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+        返回
+      </button>
+      <h3>在手订单</h3>
+      <div class="history" (click)="getHistory()"><button> 历史</button></div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content #content class="all-content" [ngSwitch]="info">
+<ion-content class="all-content">
+
   <ion-row class="row1">
     <ion-col center text-center>
       <ion-note>
@@ -26,61 +24,30 @@
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        买入
+        数量
       </ion-note>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        卖出
+        盈亏
       </ion-note>
     </ion-col>
   </ion-row>
-  <div *ngSwitchCase='"base_0"'>
-    <ion-row class="row2">
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>-</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>添加自选品种</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>+</div>
-        </button>
-      </ion-col>
-    </ion-row>
-    <ion-list>
-      <div>
-        <ion-item icon-right>
-          <ion-row class="row3" icon-right>
-            <ion-col>XDFMM(黄金)</ion-col>
-            <ion-col>2552.145</ion-col>
-            <ion-col>155.124dffdfd</ion-col>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
-          </ion-row>
-        </ion-item>
-      </div>
-    </ion-list>
-  </div>
-  <div *ngSwitchCase='"base_1"'>
-    <ion-list>
-      <div>
-        <ion-item icon-right>
-          <ion-row class="row3" icon-right>
-            <ion-col>XDFMM(黄金)</ion-col>
-            <ion-col>2552.145</ion-col>
-            <ion-col>155.124dffdfd</ion-col>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
-          </ion-row>
 
-        </ion-item>
-      </div>
-    </ion-list>
-  </div>
-
+  <ion-list>
+    <div>
+      <ion-item  (click)="getOrder()">
+        <ion-row class="row3" >
+          <ion-col>
+           XDFMM<span class="color-blue">(空单)</span>
+          </ion-col>
+          <ion-col>0.01</ion-col>
+          <ion-col class="color-red">100.00</ion-col>
+        </ion-row>
+        <p>时间：<span>2018-01-03 11:22:11</span></p>
+        <p>开仓：<span>17.152</span> 当前价：<span class="color-blue">17.150</span></p>
+      </ion-item>
+    </div>
+  </ion-list>
 
 </ion-content>
