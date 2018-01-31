@@ -3,84 +3,69 @@
     <ion-title>交易</ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title><img src="assets/img/logo.png">模拟资金:<span>1583.22$</span></ion-title>
+    <ion-title>行情</ion-title>
   </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="info">
-      <ion-segment-button value="base_0">
-        <label>自选品种</label>
-      </ion-segment-button>
-      <ion-segment-button value="base_1">
-        <label>外汇品种</label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+  <ion-slides #mySlider >
+    <ion-slide>
+      <img src="assets/img/banner.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/banner.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/banner.jpg">
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/img/banner.jpg">
+    </ion-slide>
+  </ion-slides>
+
 </ion-header>
 
 <ion-content #content class="all-content" [ngSwitch]="info">
-  <ion-row class="row1">
+  <h3 class="title">跨境电商</h3>
+  <ion-row class="row1" (click)="register()">
     <ion-col center text-center>
       <ion-note>
-        商品
+        交易名称
       </ion-note>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        买入
+        最新价
       </ion-note>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        卖出
+        涨幅比
       </ion-note>
     </ion-col>
   </ion-row>
-  <div *ngSwitchCase='"base_0"'>
-    <ion-row class="row2">
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>-</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>添加自选品种</div>
-        </button>
-      </ion-col>
-      <ion-col center text-center (click)="addDel()">
-        <button ion-button clear small>
-          <div>+</div>
-        </button>
-      </ion-col>
-    </ion-row>
+  <div>
     <ion-list>
-      <div>
-        <ion-item icon-right>
-          <ion-row class="row3" icon-right>
-            <ion-col>XDFMM(黄金)</ion-col>
-            <ion-col>2552.145</ion-col>
-            <ion-col>155.124</ion-col>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
-          </ion-row>
-        </ion-item>
-      </div>
-    </ion-list>
-  </div>
-  <div *ngSwitchCase='"base_1"'>
-    <ion-list>
-      <div>
-        <ion-item icon-right>
-          <ion-row class="row3" icon-right>
-            <ion-col>XDFMM(黄金)</ion-col>
+        <ion-item (click)="goHomedetail()">
+          <ion-row class="row3">
+            <ion-col> <img src="../assets/img/down.png">和田玉</ion-col>
             <ion-col class="color-blue">2552.145</ion-col>
-            <ion-col class="color-blue">155.124</ion-col>
-            <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+            <ion-col><button class="btn-blue">155.124</button></ion-col>
+            <!---->
           </ion-row>
-
         </ion-item>
-      </div>
+        <ion-item (click)="goHomedetail()">
+          <ion-row class="row3">
+            <ion-col> <img src="../assets/img/up.png">和田玉</ion-col>
+            <ion-col class="color-red">2552.145</ion-col>
+            <ion-col><button class="btn-red">155.124</button></ion-col>
+            <!---->
+          </ion-row>
+        </ion-item>
     </ion-list>
   </div>
-
-
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <!--<ion-title>账户余额：<span>789.00</span></ion-title>-->
+    <ion-label>账户余额：<span>789.00</span></ion-label>
+    <button ion-button (click)="goRecharge()">快速充值</button>
+  </ion-toolbar>
+</ion-footer>

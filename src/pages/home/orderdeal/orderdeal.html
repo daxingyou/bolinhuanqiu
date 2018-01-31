@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>确认下单</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>
+      <button (click)="goBack()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+      <h3>确认下单</h3>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="all-content">
+  <ion-list class="list1">
+    <ion-item>
+      <p><span>可用余额</span><button (click)="goRecharge()">快速充值</button></p>
+    </ion-item>
+    <ion-item>
+      <p><span>品种</span><span>翡翠</span></p>
+    </ion-item>
+    <ion-item>
+      <p><span>当前价格</span><span>56.2元</span></p>
+    </ion-item>
+    <ion-item>
+      <p><span>购买手数</span><span><input type="number">手</span></p>
+    </ion-item>
+    <ion-item>
+      <p><span>所需费用</span><span>500.0元</span></p>
+    </ion-item>
+    <ion-item>
+      <p><span>手续费</span><span>200.0元</span></p>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-label>合计：<span>789.00元</span></ion-label>
+    <button ion-button (click)="goRecharge()">确认下单</button>
+  </ion-toolbar>
+</ion-footer>

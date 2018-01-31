@@ -1,31 +1,43 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>财经</ion-title>
+    <ion-title>更多</ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title>
-      <button>
-        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
-        返回
-      </button>
-      <h3>财经资讯</h3></ion-title>
+    <ion-title>更多</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="all-content">
   <ion-list>
-
-    <ion-item (click)="inforDetail()">
-      <ion-row class="row3">
-        <ion-col col-9>意大利再次引爆政治风险，欧次引爆政治次引爆政治</ion-col>
-        <ion-col col-3>12-22 22:56</ion-col>
-      </ion-row>
+    <ion-item>
+      <img src="../assets/img/yaoqingma.png">
+      <h3>邀请码</h3>
+      <label>hfjjdn</label>
     </ion-item>
     <ion-item>
-      <ion-row class="row3">
-        <ion-col col-9>意大利再次引爆政治风险，欧次引爆政治次引爆政治</ion-col>
-        <ion-col col-3>12-22 22:56</ion-col>
-      </ion-row>
+      <img src="../assets/img/zaixiankefu.png">
+      <h3>在线客服</h3>
+      <label><ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></label>
+    </ion-item>
+    <ion-item (click)="goChangepassw()">
+      <img src="../assets/img/xiugaimima.png">
+      <h3>修改密码</h3>
+      <label><ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></label>
+    </ion-item>
+    <ion-item (click)="goHelp()">
+      <img src="../assets/img/bangzhuzhongxin.png">
+      <h3>帮助中心</h3>
+      <label><ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></label>
+    </ion-item>
+    <ion-item (click)="goCode()">
+      <img src="../assets/img/wodeerweima.png">
+      <h3>我的二维码</h3>
+      <label><ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon></label>
+    </ion-item>
+    <ion-item>
+      <img src="../assets/img/banben.png">
+      <h3>版本信息</h3>
+      <label>1.1.1</label>
     </ion-item>
   </ion-list>
 

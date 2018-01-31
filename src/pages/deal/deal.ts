@@ -22,15 +22,8 @@ export class DealPage {
   goBack() {
     this.navCtrl.pop();
   }
-
-  /**
-   * 跳转历史订单页
-   */
-  getHistory(){
-    this.navCtrl.push('HistoryorderPage');
-  }
-  getOrder(){
-    this.navCtrl.push('OrderPage');
+  goDealdetail(){
+    this.navCtrl.push('DealdetailPage');
   }
 
 

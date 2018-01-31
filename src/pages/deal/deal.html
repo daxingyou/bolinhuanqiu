@@ -1,16 +1,9 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>持仓</ion-title>
+    <ion-title>交易</ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title>
-      <button (click)="goBack()">
-        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
-        返回
-      </button>
-      <h3>在手订单</h3>
-      <div class="history" (click)="getHistory()"><button> 历史</button></div>
-    </ion-title>
+    <ion-title>交易</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,36 +11,47 @@
 
   <ion-row class="row1">
     <ion-col center text-center>
+      <ion-note class="color-red">
+        0.0元
+      </ion-note>
       <ion-note>
-        商品
+        持仓盈亏
       </ion-note>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        数量
+        1单
+      </ion-note>
+      <ion-note>
+        持仓单数
       </ion-note>
     </ion-col>
     <ion-col center text-center>
       <ion-note>
-        盈亏
+        1
+      </ion-note>
+      <ion-note>
+        持仓手数
       </ion-note>
     </ion-col>
   </ion-row>
 
   <ion-list>
-    <div>
-      <ion-item  (click)="getOrder()">
-        <ion-row class="row3" >
-          <ion-col>
-           XDFMM<span class="color-blue">(空单)</span>
-          </ion-col>
-          <ion-col>0.01</ion-col>
-          <ion-col class="color-red">100.00</ion-col>
-        </ion-row>
-        <p>时间：<span>2018-01-03 11:22:11</span></p>
-        <p>开仓：<span>17.152</span> 当前价：<span class="color-blue">17.150</span></p>
-      </ion-item>
-    </div>
+    <ion-item (click)="goDealdetail()">
+      <p>订单号：<span>13743434343437</span></p>
+      <p>产品信息：<span>南红玛瑙</span></p>
+      <p class="num"><label>数量：<span>1手</span></label><label class="color-blue">类型：<span>买跌</span></label></p>
+      <p class="num"><label>状态：<span>持仓</span></label><label class="color-red">盈亏：<span>0.0</span></label></p>
+      <p>交易时间：<span>2018-12-01 12:23:11</span></p>
+    </ion-item>
+    <ion-item (click)="goDealdetail()">
+      <p>订单号：<span>13743434343437</span></p>
+      <p>产品信息：<span>南红玛瑙</span></p>
+      <p class="num"><label>数量：<span>1手</span></label><label class="color-blue">类型：<span>买跌</span></label></p>
+      <p class="num"><label>状态：<span>持仓</span></label><label class="color-red">盈亏：<span>0.0</span></label></p>
+      <p>交易时间：<span>2018-12-01 12:23:11</span></p>
+    </ion-item>
+
   </ion-list>
 
 </ion-content>

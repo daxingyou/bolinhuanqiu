@@ -1,5 +1,5 @@
-import {Component} from "@angular/core";
-import {IonicPage, NavController, LoadingController} from "ionic-angular";
+import {Component,ViewChild} from "@angular/core";
+import {IonicPage, NavController, LoadingController,Slides} from "ionic-angular";
 
 @IonicPage({
   name: 'HomePage',
@@ -11,15 +11,43 @@ import {IonicPage, NavController, LoadingController} from "ionic-angular";
 })
 
 export class HomePage {
-  infoArray = ["base_0", "base_1"];
-  info = this.infoArray[0];
+  @ViewChild('mySlider') slider: Slides;
+  mySlider = {
+    autoPlay: 2000,
+    initialSlide: 0,
+    pager: true,
+    loop: true,
+    speed: 300
+  };
   constructor(public navCtrl: NavController,
               public LoadCtrl: LoadingController) {
 
   }
+  onViewWillEnter() {
+    this.slider.startAutoplay();
+  }
 
-  addDel(){
-    this.navCtrl.push('AdddelPage');
+  ionViewWillLeave() {
+    this.slider.stopAutoplay();
+  }
+
+
+  ngOnInit() {//页面加载完成后自己调用
+
+    setInterval(() => {
+      this.slider.slideNext(300, true);
+    }, 2000);
+  }
+
+
+  register(){
+    this.navCtrl.push('LoginPage');
+  }
+  goRecharge(){
+    this.navCtrl.push('RechargePage');
+  }
+  goHomedetail(){
+    this.navCtrl.push('HomedetailPage');
   }
 
 }

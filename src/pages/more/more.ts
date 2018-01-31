@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IonicPage, NavController} from "ionic-angular";
+import {IonicPage, NavController,ModalController} from "ionic-angular";
 @IonicPage({
   name: 'MorePage',
   segment: 'MorePage'
@@ -11,15 +11,23 @@ import {IonicPage, NavController} from "ionic-angular";
 })
 
 export class MorePage {
-
-  constructor(public navCtrl: NavController) {
+  MyModalSuccessCode;
+  constructor(public navCtrl: NavController,
+              private myModal: ModalController,
+  ) {
 
 
   }
-  inforDetail(){
-    this.navCtrl.push("InfordetailPage");
+  goHelp(){
+    this.navCtrl.push("HelpPage");
   }
-
+  goChangepassw(){
+    this.navCtrl.push("ChangepasswPage");
+  }
+  goCode(){
+    this.MyModalSuccessCode=this.myModal.create('MyCodeModal');
+    this.MyModalSuccessCode.present();
+  }
 
 
 

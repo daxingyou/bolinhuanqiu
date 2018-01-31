@@ -1,56 +1,64 @@
 page-my{
-  .toolbar-ios ion-title,.toolbar-md ion-title{
-    padding: 0 0 1px;
-  }
-  .toolbar-title-ios,.toolbar-title-md{
-    height: 100%;
-  }
   ion-header .toolbar-ios ion-title,
   ion-header .toolbar-md ion-title{
-    background-color: #1f2229;
-    overflow: hidden;
-    button{
-      float: left;
-      width: 20%;
-      background-color: #1f2229;
-      color: #d9bc84;
-      height: 100%;
-    }
-    h3{
-      float: left;
-      font-size: 16px;
-      width: 60%;
-      border-left: 1px solid #32353c;
-      border-right: 1px solid #32353c;
-      margin:0;
-      color: #d9bc84;
-      height: 100%;
-      line-height: 44px;
-    }
+    background-color: #1296db;
   }
   .all-content{
-    background-color: #232730;
-    .item-ios,.item-md{
-      background-color: #232730;
-      color: #d9bc84;
-      padding-left: 0;
-      font-size: 14px;
+    background-color: #efefef;
+    position: relative;
+    .list-ios,.list-md{
+
+      margin: -1px 0 0px;
+      .item-block{
+        background-color: #1296db;
+        color: #fff;
+        p{
+          color: #fff;
+        }
+      }
+      .item-ios ion-avatar ion-img,
+      .item-ios ion-avatar img,
+      .item-md ion-avatar ion-img,
+      .item-md ion-avatar img
+      {
+        width: 70px;
+        height: 70px;
+
+      }
     }
-    .row3 .col:nth-child(2),
-    .row3 .col:nth-child(3){
-      text-align: right;
+
+    .row1{
+      background-color: #fff;
+      margin:10px 10px 0;
+
+      .col{
+        padding: 15px 5px;
+      }
+      .col:nth-child(2){
+        border-left:1px solid #d3d3d3;
+        border-right:1px solid #d3d3d3;
+      }
+
+      .note-ios,.note-md{
+        display: block;
+        img{
+          width: 60px;
+          height: auto;
+        }
+      }
     }
-    [icon-right] ion-icon, [icon-end] ion-icon{
-      color: #d9bc84;
+    .row1:last-child{
+      margin:0 10px;
     }
-    .list-ios .item-block .item-inner,
-    .list-md .item-block .item-inner{
-      border-bottom: 0.55px solid #31353e;;
+    .open{
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      button{
+        background-color: #fd9a63;
+      }
     }
-    .item-ios.item-block .item-inner,
-    .item-md.item-block .item-inner{
-      padding-left: 8px;
-    }
+
   }
 
 }

@@ -16,6 +16,9 @@ export class RegisterPage {
 
 
   }
+  login(){
+    this.navCtrl.push('LoginPage');
+  }
 
 
 }

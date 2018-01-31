@@ -1,0 +1,135 @@
+page-homedetail{
+  .toolbar-ios ion-title,.toolbar-md ion-title{
+    padding: 0 0 1px;
+  }
+  .toolbar-title-ios,.toolbar-title-md{
+    height: 100%;
+  }
+  ion-header .toolbar-ios ion-title,
+  ion-header .toolbar-md ion-title{
+    background-color: #1296db;
+    overflow: hidden;
+    button,.history{
+      float: left;
+      width: 20%;
+      color: #fff;
+      height: 100%;
+      background-color: #1296db;
+    }
+    button:last-child{
+      overflow: hidden;
+      height: 30px;
+      border-radius: 5px;
+      width: 70%;
+      margin:7px 15%;
+      text-align: center;
+      line-height: 30px;
+      padding: 0;
+    }
+    h3{
+      float: left;
+      font-size: 16px;
+      width: 60%;
+      margin:0;
+      color: #fff;
+      height: 100%;
+      line-height: 44px;
+    }
+  }
+
+   .all-content{
+     background-color: #fff;
+     .title{
+       background-color: #fff;
+       text-align: center;
+       font-size: 14px;
+       margin-top: 0.6rem;
+     }
+     .row1{
+       background-color: #eeeeee;
+       .col{
+         padding: 10px;
+         //text-align: right!important;
+       }
+       .col:first-child{
+         text-align: left!important;
+       }
+       .note-ios,.note-md{
+         color: #333333;
+
+       }
+     }
+     .label-ios,.label-md{
+       margin:0px 8px 0 0!important;
+     }
+     .row3{
+       .col:first-child{
+         text-align: left!important;
+       }
+       .col{
+         img{
+           width: 8px;
+           height: auto;
+           display: block;
+           margin: 4px 10px 0;
+           float: left;
+         }
+         font-size: 14px;
+         text-align: right;
+         button{
+           //background-color: #008001;
+           color: #fff;
+           padding:10px;
+           border-radius: 5px;
+           font-size: 15px;
+         }
+       }
+     }
+     .item-ios,.item-md{
+       background-color: #fff;
+       padding-left: 0;
+     }
+
+     .item-ios.item-block .item-inner,
+     .item-md.item-block .item-inner{
+       //padding-left: 8px;
+       //padding-right: 0;
+     }
+     .color-blue{
+       color: #008001;
+     }
+     .color-red{
+       color: #fe0000;
+
+     }
+     .btn-blue{
+       background-color:#008001 ;
+     }
+     .btn-red{
+       background-color:#fe0000 ;
+     }
+
+   }
+
+  .footer-ios .toolbar-ios:first-child .toolbar-background-ios,
+  .footer-md .toolbar-md:first-child .toolbar-background-md{
+    background-color: #efefef;
+  }
+  ion-footer{
+    .label-ios,.label-md{
+      float: left;
+      margin: 11px 8px 11px 10px;
+      span{
+        color: #ee8a1b;
+      }
+    }
+    .button-ios,.button-md{
+      float: right;
+      height: 2.6em;
+      margin: 5px 10px;
+    }
+  }
+
+
+}
+

@@ -1,28 +1,76 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>我的</ion-title>
+    <ion-title>个人中心</ion-title>
   </ion-navbar>
   <ion-toolbar>
-    <ion-title><button> <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon> 返回</button><h3>用户信息</h3></ion-title>
+    <ion-title>个人中心</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="all-content">
+<ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="../assets/img/person.jpg">
+    </ion-avatar>
+    <h2>李云龙</h2>
+    <p>余额：<span>56.99</span>元</p>
+  </ion-item>
+</ion-list>
 
-  <ion-list>
-    <div>
-      <ion-item icon-right *ngFor="let item of items" (click)="itemSelected(item.id)">
-        <ion-row class="row3" icon-right>
-          <ion-col>{{item.name}}</ion-col>
-          <ion-col>2552.145</ion-col>
-        </ion-row>
-      </ion-item>
-      <ion-item icon-right *ngFor="let ite of itemx" (click)="itemSelected(ite.id)">
-        <ion-row class="row3" icon-right>
-          <ion-col>{{ite.name}}</ion-col>
-          <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
-        </ion-row>
-      </ion-item>
-    </div>
-  </ion-list>
+  <ion-row class="row1">
+    <ion-col center text-center (click)="goRecharge()">
+      <ion-note class="color-red">
+       <img src="../assets/img/chongzhi.png">
+      </ion-note>
+      <ion-note>
+        充值
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center (click)="goWithdraw()">
+      <ion-note>
+        <img src="../assets/img/tixian.png">
+      </ion-note>
+      <ion-note>
+        提现
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center (click)="goHistorydeal()">
+      <ion-note>
+        <img src="../assets/img/lishi.png">
+      </ion-note>
+      <ion-note>
+        历史交易
+      </ion-note>
+    </ion-col>
+  </ion-row>
+  <ion-row class="row1" >
+    <ion-col center text-center (click)="goChargerecord()">
+      <ion-note class="color-red">
+        <img src="../assets/img/mingxi.png">
+      </ion-note>
+      <ion-note>
+        充值明细
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center (click)="goWithdrawrecord()">
+      <ion-note>
+        <img src="../assets/img/tixianmingxi.png">
+      </ion-note>
+      <ion-note>
+        提现明细
+      </ion-note>
+    </ion-col>
+    <ion-col center text-center (click)="goMoneyrecord()">
+      <ion-note>
+        <img src="../assets/img/zijin.png">
+      </ion-note>
+      <ion-note>
+        资金明细
+      </ion-note>
+    </ion-col>
+  </ion-row>
+  <div padding class="open" >
+    <button  ion-button block>安全退出</button>
+  </div>
 </ion-content>

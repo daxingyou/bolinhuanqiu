@@ -1,0 +1,118 @@
+page-orderdeal {
+  .toolbar-ios ion-title, .toolbar-md ion-title {
+    padding: 0 0 1px;
+  }
+  .toolbar-title-ios, .toolbar-title-md {
+    height: 100%;
+  }
+  ion-header .toolbar-ios ion-title,
+  ion-header .toolbar-md ion-title {
+    background-color: #1296db;
+    overflow: hidden;
+    button, .history {
+      float: left;
+      width: 20%;
+      color: #fff;
+      height: 100%;
+      background-color: #1296db;
+    }
+    button:last-child {
+      overflow: hidden;
+      height: 30px;
+      border: 1px solid #d9bc84;
+      border-radius: 5px;
+      width: 70%;
+      margin: 7px 15%;
+      text-align: center;
+      line-height: 30px;
+      padding: 0;
+    }
+    h3 {
+      float: left;
+      font-size: 16px;
+      width: 60%;
+      margin: 0;
+      color: #fff;
+      height: 100%;
+      line-height: 44px;
+    }
+  }
+
+  .all-content {
+    background-color: #eee;
+    .list1 {
+      margin: -1px 0 0px;
+      .label-ios,.label-md{
+        margin: 5px 8px 5px 0;
+      }
+      .item-ios, .item-md {
+        background-color: #fff;
+        color: #d9bc84;
+        padding-left: 0;
+        p {
+          color: #333333;
+          overflow: hidden;
+          span{
+            display: block;
+            float: left;
+          }
+          input{
+            border:none;
+            border:1px solid #bfbfbf;
+            width: 50px;
+            margin:0 5px;
+            padding: 5px 3px;
+            border-radius: 5px;
+            color: #000;
+          }
+          button{
+            background-color: #1296db;
+            color: #fff;
+            padding: 8px;
+            border-radius: 5px;
+            float: right;
+          }
+          span:last-child{
+            float: right;
+            color: #000;
+
+          }
+        }
+
+      }
+      .item-ios.item-block .item-inner,
+      .item-md.item-block .item-inner {
+        padding-left: 8px;
+      }
+    }
+
+    .color-blue {
+      color: #008001 !important;
+    }
+    .color-red {
+      color: #fe0000 !important;
+    }
+  }
+  .footer-ios .toolbar-ios:first-child .toolbar-background-ios,
+  .footer-md .toolbar-md:first-child .toolbar-background-md{
+    background-color: #fff;
+    border-width: 0;
+  }
+  ion-footer{
+    .label-ios,.label-md{
+      float: left;
+      margin: 11px 8px 11px 10px;
+      span{
+        color: #ee8a1b;
+      }
+    }
+    .button-ios,.button-md{
+      float: right;
+      height: 2.6em;
+      background-color: #fe0000;
+      border-radius: 0;
+      margin:0;
+    }
+  }
+
+}

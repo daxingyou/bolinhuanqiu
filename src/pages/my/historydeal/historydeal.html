@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>历史订单</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>
+      <button (click)="goBack()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+      <h3>历史订单</h3>
+      <!--<div class="history" (click)="getHistory()"><button> 历史</button></div>-->
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="all-content">
+  <ion-list>
+    <ion-item (click)="goDealdetail()">
+      <p>订单号：<span>13743434343437</span></p>
+      <p>产品信息：<span>南红玛瑙</span></p>
+      <p class="num"><label>数量：<span>1手</span></label><label class="color-blue">类型：<span>买跌</span></label></p>
+      <p class="num"><label>状态：<span>持仓</span></label><label class="color-red">盈亏：<span>0.0</span></label></p>
+      <p>交易时间：<span>2018-12-01 12:23:11</span></p>
+    </ion-item>
+    <ion-item (click)="goDealdetail()">
+      <p>订单号：<span>13743434343437</span></p>
+      <p>产品信息：<span>南红玛瑙</span></p>
+      <p class="num"><label>数量：<span>1手</span></label><label class="color-blue">类型：<span>买跌</span></label></p>
+      <p class="num"><label>状态：<span>持仓</span></label><label class="color-red">盈亏：<span>0.0</span></label></p>
+      <p>交易时间：<span>2018-12-01 12:23:11</span></p>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-content class="modal-bg">
+  <div class="cover-center way-center sett">
+    <h2>止损盈亏</h2>
+    <div class="con-img">
+      <ion-list>
+        <ion-item>
+          <ion-label>止盈</ion-label>
+          <ion-select [(ngModel)]="gaming" multiple="true" cancelText="取消" okText="确定">
+            <ion-option value="0">默认</ion-option>
+            <ion-option value="1" selected="true">10%</ion-option>
+            <ion-option value="2">20%</ion-option>
+            <ion-option value="3">30%</ion-option>
+            <ion-option value="4">40%</ion-option>
+            <ion-option value="5">50%</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>止损</ion-label>
+          <ion-select [(ngModel)]="gamig" multiple="true" cancelText="取消" okText="确定">
+            <ion-option value="0" >默认</ion-option>
+            <ion-option value="1" selected="true">10%</ion-option>
+            <ion-option value="2">20%</ion-option>
+            <ion-option value="3">30%</ion-option>
+            <ion-option value="4">40%</ion-option>
+            <ion-option value="5">50%</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </div>
+    <h2 (click)="sure()">确定</h2>
+  </div>
+</ion-content>

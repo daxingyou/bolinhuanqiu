@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>翡翠</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <!--<ion-title>-->
+      <!--<button (click)="goBack()">-->
+        <!--<ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>-->
+      <!--</button>-->
+      <!--<h3>翡翠</h3>-->
+    <!--</ion-title>-->
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content #content class="all-content" [ngSwitch]="info">
+  <div style="background-color: #000">
+    <canvas #chart height="200" width="{{w}}"></canvas>
+  </div>
+    <ion-list>
+        <ion-item (click)="goOrder()">
+          <ion-row class="row3">
+            <ion-col><button class="btn-red">买涨</button></ion-col>
+            <ion-col>2552.145</ion-col>
+            <ion-col><button class="btn-blue">买跌</button></ion-col>
+          </ion-row>
+        </ion-item>
+
+    </ion-list>
+</ion-content>

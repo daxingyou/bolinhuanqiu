@@ -1,0 +1,66 @@
+page-withdraw{
+  .toolbar-ios ion-title,.toolbar-md ion-title{
+    padding: 0 0 1px;
+  }
+  .toolbar-title-ios,.toolbar-title-md{
+    height: 100%;
+  }
+  ion-header .toolbar-ios ion-title,
+  ion-header .toolbar-md ion-title{
+    background-color: #1296db;
+    overflow: hidden;
+    button,.history{
+      float: left;
+      width: 20%;
+      color: #fff;
+      height: 100%;
+      background-color: #1296db;
+    }
+    button:last-child{
+      overflow: hidden;
+      height: 30px;
+      border:1px solid #d9bc84;
+      border-radius: 5px;
+      width: 70%;
+      margin:7px 15%;
+      text-align: center;
+      line-height: 30px;
+      padding: 0;
+    }
+    h3{
+      float: left;
+      font-size: 16px;
+      width: 60%;
+      margin:0;
+      color: #fff;
+      height: 100%;
+      line-height: 44px;
+    }
+  }
+
+  .all-content{
+    background-color: #fff;
+    .list{
+      ion-item{
+        p{
+          color: #000;
+        }
+      }
+    }
+
+
+    .color-blue{
+      color: #008001!important;
+    }
+    .color-red{
+      color: #fe0000!important;
+    }
+    .open{
+      padding: 0px 16px;
+      button{
+        background-color: #fd9a63;
+      }
+    }
+    }
+
+}
