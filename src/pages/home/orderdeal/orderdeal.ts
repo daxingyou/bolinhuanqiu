@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {IonicPage, NavController, LoadingController} from "ionic-angular";
+import {IonicPage, NavController, LoadingController,ModalController} from "ionic-angular";
 @IonicPage({
   name: 'OrderdealPage',
   segment: 'OrderdealPage'
@@ -10,8 +10,10 @@ import {IonicPage, NavController, LoadingController} from "ionic-angular";
 })
 
 export class OrderdealPage {
+  MyModalSuccessWarn;
   constructor(public navCtrl: NavController,
-              public LoadCtrl: LoadingController
+              public LoadCtrl: LoadingController,
+              private myModal: ModalController
   ) {
 
 
@@ -21,6 +23,10 @@ export class OrderdealPage {
   }
   goRecharge(){
     this.navCtrl.push('RechargePage');
+  }
+  sureOrder(){
+    this.MyModalSuccessWarn=this.myModal.create('MyWarnModal');
+    this.MyModalSuccessWarn.present();
   }
 
 

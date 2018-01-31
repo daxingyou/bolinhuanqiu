@@ -1,56 +1,56 @@
-page-modal{
+page-modal {
   .modal-bg {
     background: rgba(0, 0, 0, 0.45);
     position: relative;
   }
-  .cover-center{
-    width:80%;
-    max-width:280px;
+  .cover-center {
+    width: 80%;
+    max-width: 280px;
     background: white;
-    margin:40% auto 0;
+    margin: 40% auto 0;
     border-radius: 0.3em;
     position: relative;
-    padding:10px 0 10px;
+    padding: 10px 0 10px;
   }
-  .success{
+  .success {
     position: absolute;
-    top:-50px;
+    top: -50px;
     left: 50%;
     margin-left: -50px;
-    width:100px;
-    height:100px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background: white;
   }
-  .success>img{
-    width:70px;
+  .success > img {
+    width: 70px;
     display: block;
-    margin:5px auto;
+    margin: 5px auto;
   }
 
-  .cover-center>h2{
-    padding:0 1rem 10px;
+  .cover-center > h2 {
+    padding: 0 1rem 10px;
     text-align: center;
-    margin-top:0;
-    font-size:1.9rem;
-    border-bottom:1px solid #cfcfcf;
+    margin-top: 0;
+    font-size: 1.9rem;
+    border-bottom: 1px solid #cfcfcf;
   }
-  .cover-center>p{
-    padding:0 1rem;
+  .cover-center > p {
+    padding: 0 1rem;
     text-align: center;
-    color:#5f5f5e;
+    color: #5f5f5e;
   }
-  ion-img.success-qr{
-    border:1px solid #dcdcdc;
+  ion-img.success-qr {
+    border: 1px solid #dcdcdc;
     width: 140px;
     height: 140px;
     margin: 10px auto;
     text-align: center;
     display: block;
-    padding:0.5rem;
+    padding: 0.5rem;
     background: white;
   }
-  .success-sure{
+  .success-sure {
     background: white;
     border: 1px solid #00afff;
     color: #00afff;
@@ -61,71 +61,97 @@ page-modal{
   }
 
   /*二维码*/
-  .code{
-    .con-img{
-      img{
+  .code {
+    .con-img {
+      img {
         width: 120px;
         height: auto;
-        display:block;
-        margin:0 auto;
+        display: block;
+        margin: 0 auto;
       }
     }
-    h2:last-child{
+    h2:last-child {
       margin-top: 1rem;
-      border-top:1px solid #cfcfcf;
+      border-top: 1px solid #cfcfcf;
       border-bottom: none;
-      padding:10px 1rem 0;
-      margin-bottom:0;
+      padding: 10px 1rem 0;
+      margin-bottom: 0;
       color: #55bde2;
       background-color: #f8f9f4;
     }
   }
   //止损盈亏
-  .sett{
-    .con-img{
-      img{
+  .sett, .warn {
+    .con-img {
+      img {
         width: 120px;
         height: auto;
-        display:block;
-        margin:0 auto;
+        display: block;
+        margin: 0 auto;
       }
     }
-    h2:last-child{
+    h2:last-child {
       margin-top: 1rem;
-      border-top:1px solid #cfcfcf;
+      border-top: 1px solid #cfcfcf;
       border-bottom: none;
-      padding:10px 1rem 0;
-      margin-bottom:0;
+      padding: 10px 1rem 0;
+      margin-bottom: 0;
       color: #55bde2;
       background-color: #f8f9f4;
     }
     .list-ios > .item-block:first-child,
-    .list-md > .item-block:first-child{
-      border-top:none;
+    .list-md > .item-block:first-child {
+      border-top: none;
     }
     .list-ios .item-block .item-inner,
-    .list-md .item-block .item-inner{
+    .list-md .item-block .item-inner {
       border-bottom: none;
     }
     .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block,
-    .list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block{
+    .list-md > .item-block:last-child, .list-md > .item-wrapper:last-child .item-block {
       border-bottom: none;
     }
   }
+  //温馨提示
+  .warn {
+    padding: 10px 0 0px;
+    .con-img {
+      padding-bottom: 10px;
+      p {
+        text-align: center;
+      }
+    }
+    .last-btn{
+      overflow: hidden;
+      background-color: #ececec;
 
+      button{
+        padding:15px 10px;
+        float: left;
+        width: 50%;
+        background-color: #ececec;
+        font-size: 16px;
+        color: #55bde2;
+      }
+      button:last-child{
+        float: right;
+        border-left:1px solid #cfcfcf;
+      }
+    }
+  }
   .infor {
     .list-ios[inset], .list-md[inset] {
       position: relative;
     }
-    .sex-select .item:nth-child(1){
+    .sex-select .item:nth-child(1) {
       position: absolute;
       border-bottom: none;
       background: none;
       top: 0;
       left: 40px;
     }
-    .sex-select{
-      margin:0;
+    .sex-select {
+      margin: 0;
     }
     .sex-select .item:nth-child(2) {
       position: absolute;
@@ -149,21 +175,23 @@ page-modal{
     }
   }
 
-  .content-ios:not([no-bounce]) > .scroll-content::before{
+  .content-ios:not([no-bounce]) > .scroll-content::before {
     bottom: 0;
   }
 }
 
-.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner{
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
   border-bottom-color: inherit;
   -webkit-box-shadow: inherit;
   box-shadow: inherit;
 }
+
 .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
   border-bottom-color: inherit;
   -webkit-box-shadow: inherit;
   box-shadow: inherit;
 }
+
 .item-md.item-input.item-input-has-focus:last-child,
 .item-md.item-input-has-focus:last-child,
 .item-ios.item-input.item-input-has-focus:last-child,
@@ -171,7 +199,7 @@ page-modal{
 .item-md.item-input.item-input-has-focus .item-inner,
 .item-md.item-input-has-focus .item-inner,
 .item-ios.item-input.item-input-has-focus .item-inner,
-.item-ios.item-input-has-focus .item-inner{
+.item-ios.item-input-has-focus .item-inner {
   border-bottom-color: inherit;
   -webkit-box-shadow: inherit;
   box-shadow: inherit;

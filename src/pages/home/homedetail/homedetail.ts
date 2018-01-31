@@ -52,23 +52,6 @@ export class HomedetailPage {
           end : 100
         }
       ],
-      // axis:[
-      //   {
-      //     // axisLine:{
-      //     //   lineStyle:{
-      //     //     color: '#888888',
-      //     //     width: 1,
-      //     //     type: 'solid'
-      //     //   },
-      //     //
-      //     // },
-      //     axisLabel:{
-      //       textStyle:{
-      //         color: '#fff'
-      //       },
-      //     }
-      //   }
-      // ],
       xAxis : [
         {
           type : 'category',
