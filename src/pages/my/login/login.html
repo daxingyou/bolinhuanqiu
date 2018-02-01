@@ -21,14 +21,14 @@
 
     <ion-item>
       <ion-label><img src="../../assets/img/tel.png"></ion-label>
-      <ion-input type="number" placeholder="请输入手机号码"></ion-input>
+      <ion-input [(ngModel)]="infor.phone" type="number" placeholder="请输入手机号码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label><img src="../../assets/img/pass.png"></ion-label>
-      <ion-input type="password" placeholder="请输入密码"></ion-input>
+      <ion-input [(ngModel)]="infor.password" type="password" placeholder="请输入密码"></ion-input>
     </ion-item>
   </ion-list>
-  <div padding class="login" (click)="homePage()">
+  <div padding class="login" (click)="login()">
     <button ion-button block>登录</button>
   </div>
   <div padding class="open" (click)="register()">

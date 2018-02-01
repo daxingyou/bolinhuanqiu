@@ -5,8 +5,15 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+
+import {HttpService} from "../providers/HttpService";
+import {StorageService} from "../providers/StorageService";
+import {CommonService} from "../providers/CommonService";
 import { HttpModule }from '@angular/http';
 import {IonicStorageModule} from "@ionic/storage";
+import {CommonJs} from "../providers/CommonJs";
+import {CommonToast} from "../providers/CommonToas";
 @NgModule({
   declarations: [
     MyApp,
@@ -21,12 +28,17 @@ import {IonicStorageModule} from "@ionic/storage";
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
+    MyApp
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpService,
+    StorageService,
+    CommonService,
+    CommonJs,
+    CommonToast,
 
   ]
 })

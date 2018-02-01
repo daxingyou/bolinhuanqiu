@@ -18,20 +18,20 @@
     <ion-item>
       <ion-label><img src="../../assets/img/pass.png"></ion-label>
       <ion-label>旧 密 码</ion-label>
-      <ion-input type="number" placeholder="请输入当前登录密码"></ion-input>
+      <ion-input [(ngModel)]="infor.oldpsw" type="text" placeholder="请输入当前登录密码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label><img src="../../assets/img/pass.png"></ion-label>
       <ion-label>新 密 码</ion-label>
-      <ion-input type="password" placeholder="请输入新的登录密码"></ion-input>
+      <ion-input [(ngModel)]="infor.newpsw" type="password" placeholder="请输入新的登录密码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label><img src="../../assets/img/pass.png"></ion-label>
       <ion-label>确认密码</ion-label>
-      <ion-input type="password" placeholder="请再次输入登录密码"></ion-input>
+      <ion-input [(ngModel)]="infor.renewpsw" type="password" placeholder="请再次输入登录密码"></ion-input>
     </ion-item>
   </ion-list>
-  <div padding class="login" (click)="homePage()">
+  <div padding class="login" (click)="changePassword()">
     <button ion-button block>确认</button>
   </div>
 

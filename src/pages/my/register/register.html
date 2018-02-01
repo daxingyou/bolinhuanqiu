@@ -21,39 +21,38 @@
 
     <ion-item>
       <ion-label>手机号码</ion-label>
-      <ion-input type="number" placeholder="请输入您的手机号码"></ion-input>
+      <ion-input [(ngModel)]="infor.phone" type="number" placeholder="请输入您的手机号码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>用户名</ion-label>
-      <ion-input type="text" placeholder="请输入您的用户名"></ion-input>
+      <ion-input [(ngModel)]="infor.username" type="text" placeholder="请输入您的用户名"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>设置密码</ion-label>
-      <ion-input type="password" placeholder="请输入登录密码"></ion-input>
+      <ion-input [(ngModel)]="infor.password" type="password" placeholder="请输入登录密码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>确认密码</ion-label>
-      <ion-input type="password" placeholder="请再次输入密码"></ion-input>
+      <ion-input [(ngModel)]="infor.repassword" type="password" placeholder="请再次输入密码"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>邀请码</ion-label>
-      <ion-input type="text" placeholder="请输入您的邀请码"></ion-input>
+      <ion-input [(ngModel)]="infor.invitecode" type="text" placeholder="请输入您的邀请码"></ion-input>
     </ion-item>
-    <ion-item class="code">
-      <ion-label>验证码</ion-label>
-      <ion-input type="text" placeholder="请输入验证码"></ion-input>
-      <ion-label class="get-code">获取验证码</ion-label>
-    </ion-item>
-
+    <div class="code">
+      <label>验证码</label>
+      <ion-input [(ngModel)]="infor.verifycode" type="text" placeholder="请输入验证码"></ion-input>
+      <button class="get-code" (click)="sendMsg()">获取验证码</button>
+    </div>
 
   </ion-list>
-  <div padding (click)="login()">
-    <button ion-button block>立即注册</button>
+  <div padding >
+    <button ion-button block (click)="register()">立即注册</button>
   </div>
   <ion-list class="list2">
     <ion-item>
       <ion-label>我已阅读并同意<span>《免责声明》</span></ion-label>
-      <ion-checkbox ></ion-checkbox>
+      <ion-checkbox  [(ngModel)]="infor.disclaimer"></ion-checkbox>
     </ion-item>
   </ion-list>
 

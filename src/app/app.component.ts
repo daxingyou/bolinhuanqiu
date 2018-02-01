@@ -8,7 +8,7 @@ import {SplashScreen} from "@ionic-native/splash-screen";
 })
 export class MyApp {
 
-  rootPage: any = 'tabsPage';
+  rootPage: any = 'LoginPage';
 
 
   constructor(platform: Platform,
@@ -21,6 +21,7 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       this.menuCtrl.enable(false);
+
 
     });
 

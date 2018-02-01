@@ -8,19 +8,30 @@
         <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
       </button>
       <h3>资金明细</h3>
-      <!--<div class="history" (click)="getHistory()"><button> 历史</button></div>-->
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="all-content">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="加载中……">
+    </ion-refresher-content>
+  </ion-refresher>
   <ion-list>
-    <ion-item >
-      <p>账户充值</p>
-      <p class="num"><label>交易：<span>1000.0</span></label><label >充值</label></p>
-      <p>交易时间：<span>2018-12-01 12:23:11</span></p>
+    <ion-item *ngFor="let item of itemx;let i=index">
+      <p>{{item.trade_item}}</p>
+      <p class="num"><label>交易：<span>{{item.trade_price}}</span></label><label>{{item.trade_type_name}}</label></p>
+      <p>交易时间：<span>{{item.create_time}}</span></p>
     </ion-item>
 
   </ion-list>
-
+  <ion-infinite-scroll (ionInfinite)="doInfiniteMember($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多……">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <p *ngIf="!itemx.length" class="remind-not">暂无资金明细！</p>
 </ion-content>
