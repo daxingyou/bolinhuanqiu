@@ -23,35 +23,35 @@
     </ion-item>
     <ion-item>
       <ion-label>提现金额</ion-label>
-      <ion-input type="number" placeholder="请输入提现金额"></ion-input>
+      <ion-input [(ngModel)]="infor.amount" type="number" placeholder="请输入提现金额"></ion-input>
     </ion-item>
     <ion-item>
       <p>注：提现金额必须是100的倍数，出金时间周一到周五9:00-16:30,出金手续1%，当天入金与盈利不能出金。</p>
     </ion-item>
     <ion-item>
       <ion-label>借记卡卡号</ion-label>
-      <ion-input type="number" placeholder="请输入借记卡卡号"></ion-input>
+      <ion-input [(ngModel)]="infor.bank_card" type="number" placeholder="请输入借记卡卡号"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>用户</ion-label>
-      <ion-input type="number" placeholder="请输入用户"></ion-input>
+      <ion-input [(ngModel)]="infor.name" type="text" placeholder="请输入用户"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>开户银行</ion-label>
-      <ion-input type="number" placeholder="请输入开户银行"></ion-input>
+      <ion-input [(ngModel)]="infor.bank_name" type="text" placeholder="请输入开户银行"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>地区</ion-label>
-      <ion-input type="number" placeholder="请输入地区"></ion-input>
+      <ion-input [(ngModel)]="infor.bank_city" type="text" placeholder="请输入地区"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>支行</ion-label>
-      <ion-input type="number" placeholder="请输入支行"></ion-input>
+      <ion-input [(ngModel)]="infor.bank_branch" type="text" placeholder="请输入支行"></ion-input>
     </ion-item>
   </ion-list>
 
 
-  <div padding class="open">
+  <div padding class="open" (click)="getWithdraw()">
     <button ion-button block>确认提现</button>
   </div>
 </ion-content>

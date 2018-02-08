@@ -45,6 +45,19 @@ page-withdraw{
         white-space: inherit!important;
       }
     }
+    .item-ios.item-input.item-input-has-focus .item-inner,
+    .item-ios.item-input-has-focus .item-inner,
+    .item-md.item-input.item-input-has-focus .item-inner,
+    .item-md.item-input-has-focus .item-inner{
+      border-bottom-color:#c8c7cc;
+    }
+    .item-ios.item-input.item-input-has-focus,
+    .item-ios.item-input-has-focus,
+    .item-md.item-input.item-input-has-focus,
+    .item-md.item-input-has-focus{
+      border-bottom-color:#c8c7cc;
+    }
+
     .list{
       .label-ios,.label-md {
         margin: 5px 8px 5px 0;

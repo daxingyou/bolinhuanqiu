@@ -52,7 +52,9 @@ export class MoneyrecordPage {
     this.commonService.getResult('User/money_log', param).then(res => {
       if (res.code == 0) {
         setTimeout(() => {
-          this.loading.dismiss();
+          this.loading.dismiss(
+
+          );
         }, 500);
         this.list = res.data.data;
         this.itemx = this.itemx.concat(this.list);

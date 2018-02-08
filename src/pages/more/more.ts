@@ -28,6 +28,9 @@ export class MorePage {
     this.MyModalSuccessCode=this.myModal.create('MyCodeModal');
     this.MyModalSuccessCode.present();
   }
+  goService(){
+    this.navCtrl.push("ServicePage");
+  }
 
 
 

@@ -1,4 +1,4 @@
-page-dealdetail{
+page-raisequestion{
   .toolbar-ios ion-title,.toolbar-md ion-title{
     padding: 0 0 1px;
   }
@@ -25,6 +25,11 @@ page-dealdetail{
       text-align: center;
       line-height: 30px;
       padding: 0;
+      img{
+        width: 20px;
+        height: auto;
+        margin:5px auto;
+      }
     }
     h3{
       float: left;
@@ -39,43 +44,22 @@ page-dealdetail{
 
   .all-content{
     background-color: #eeeeee;
-    .list-ios > .item-block:first-child,
-    .list-md > .item-block:first-child{
-      border-top:none;
+    textarea.text-input{
+      background-color: #fff;
+      border: 1px dashed #000;
+      height: 150px;
     }
-    .list-ios .item-block .item-inner,
-    .list-md .item-block .item-inner{
-      border-bottom: none;
+    .text-input-ios,.text-input-md{
+      margin: 5px 8px 5px 8px;
+      width: calc(100% - 16px);
     }
-    .item-ios:last-child,.item-md:last-child{
-      ion-label{
-        white-space: inherit!important;
-      }
-    }
-    .list{
-      background-color: #eeeeee;
 
-      ion-item{
-        p{
-          color: #000;
-        }
-      }
-    }
     .color-blue{
       color: #008001!important;
     }
     .color-red{
       color: #fe0000!important;
-    }
-    .color-orange{
-      color: #f88518!important;
-    }
-    .open{
-      padding: 0px 16px;
-      button{
-        background-color: #fe0000;
-      }
-    }
-    }
 
+    }
+  }
 }

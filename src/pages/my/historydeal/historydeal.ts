@@ -18,10 +18,9 @@ import {StorageService} from "../../../providers/StorageService";
 export class HistorydealPage {
   token;
   page=1;
-  loadCtrling=false;
-  loading;
   itemx=[];
   list=[];
+  loading;
   constructor(public navCtrl: NavController,
               private commonService: CommonService,
               private CommonToast: CommonToast,

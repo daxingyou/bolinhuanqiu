@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>在线客服</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>
+      <button (click)="goBack()">
+        <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+      </button>
+      <h3>在线客服</h3>
+      <div class="history"><button (click)="goProblem()">提问</button></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="all-content">
+  <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
+    <!--<ion-refresher-content-->
+      <!--pullingIcon="arrow-dropdown"-->
+      <!--pullingText="Pull to refresh"-->
+      <!--refreshingSpinner="circles"-->
+      <!--refreshingText="加载中……">-->
+    <!--</ion-refresher-content>-->
+  <!--</ion-refresher>-->
+  <ion-list>
+    <ion-item (click)="goDealdetail(item.id)">
+      <p>问：<span>呵呵</span></p>
+      <p>答：<span>哈哈</span></p>
+    </ion-item>
+
+  </ion-list>
+  <!--<ion-infinite-scroll (ionInfinite)="doInfiniteMember($event)">-->
+    <!--<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多……">-->
+    <!--</ion-infinite-scroll-content>-->
+  <!--</ion-infinite-scroll>-->
+  <!--<p *ngIf="!itemx.length" class="remind-not">暂无资金明细！</p>-->
+</ion-content>

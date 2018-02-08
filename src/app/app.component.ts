@@ -21,10 +21,39 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
       this.menuCtrl.enable(false);
+      // this.initWxUser();
 
 
     });
 
   }
+  // initWxUser() {
+  //   let param = {
+  //     r:'wx_api.init',
+  //   };
+  //   this.commonService.getResult(param).then(res => {
+  //     if (res.status == 1) {
+  //       wx.config({
+  //         debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+  //         appId: res.result.wx.appId,
+  //         nonceStr: res.result.wx.nonceStr,
+  //         signature: res.result.wx.signature,
+  //         timestamp: res.result.wx.timestamp,
+  //         jsApiList: ['chooseImage', 'uploadImage', 'downloadImage', 'getLocalImgData', 'openLocation', 'getLocation', 'scanQRCode', 'chooseWXPay'] // 必填，需要使用的JS接口列表
+  //       });
+  //       wx.ready(() => {
+  //         console.log('初始化js-sdk成功');
+  //       });
+  //       wx.error(res => {
+  //         console.log('初始化js-sdk失败' + res.errMsg);
+  //       });
+  //
+  //     } else {
+  //       location.href = 'http://www.fitness2u.cn/app/index.php?i=2&c=entry&m=ewei_shopv2&do=mobile&teacher=0'
+  //     }
+  //
+  //   });
+  //
+  // }
 
 }

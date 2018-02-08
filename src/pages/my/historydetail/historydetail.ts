@@ -16,9 +16,7 @@ import {StorageService} from "../../../providers/StorageService";
 export class HistorydetailPage {
   token;
   orderid;
-  item;
   name;
-  loading;
   item={
     order_id:'',
     direction:'',
@@ -31,6 +29,7 @@ export class HistorydetailPage {
     pl_funds:'',
     pl_ratio:''
   };
+  loading;
   constructor(public navCtrl: NavController,
               private commonService: CommonService,
               private CommonToast: CommonToast,
